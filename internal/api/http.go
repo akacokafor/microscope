@@ -39,8 +39,8 @@ func NewHTTPRouter(prefix string, isProduction bool, options GoCraftOptions) htt
 	basePath := fmt.Sprintf("/%s", prefix)
 	indexHandler := func(w http.ResponseWriter, r *http.Request) {
 		indexTemplate.ExecuteTemplate(w, "index.html", MicroScopeViewModel{
-			CssFilePath: fmt.Sprintf("%sapp.css", staticDir),
-			JsFilePath:  fmt.Sprintf("%sapp.js", staticDir),
+			CssFilePath: fmt.Sprintf("%s%s", staticDir, mix(staticFs, "/app.css", isProduction)),
+			JsFilePath:  fmt.Sprintf("%s%s", staticDir, mix(staticFs, "/app.js", isProduction)),
 			AppName:     "Microscope",
 			Data: map[string]interface{}{
 				"timezone":  "Africa/Lagos",
