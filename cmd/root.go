@@ -29,6 +29,7 @@ import (
 )
 
 var cfgFile string
+var AppEnv string = "dev"
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -50,7 +51,8 @@ var rootCmd = &cobra.Command{
 				return c, nil
 			},
 		}
-		apiInstance := api.NewHTTPRouter("microscope", false, api.GoCraftOptions{
+		isProd := AppEnv == "prod"
+		apiInstance := api.NewHTTPRouter("microscope", isProd, api.GoCraftOptions{
 			Namespace: "payed_app_develop",
 			Pool:      redisConn,
 		})
