@@ -3,10 +3,10 @@ module github.com/akacokafor/microscope
 go 1.16
 
 require (
-	github.com/gin-gonic/gin v1.6.3 // indirect
+	github.com/gin-gonic/gin v1.6.3
 	github.com/gocraft/work v0.5.1
 	github.com/gomodule/redigo v1.8.4
-	github.com/jinzhu/copier v0.2.8 // indirect
+	github.com/jinzhu/copier v0.2.8
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/robfig/cron v1.2.0 // indirect
