@@ -11,7 +11,7 @@
     "hot": "mix watch --hot",
     "prod": "npm run production",
     "production": "mix --production"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,7 +19,7 @@
     "axios": "^0.21",
     "bootstrap": "^4.5.0",
     "highlight.js": "^10.4.1",
-    "jquery": "^3.5",
+    "jquery": "^3.6.0",
     "laravel-mix": "^6.0.13",
     "lodash": "^4.17.19",
     "moment": "^2.10.6",

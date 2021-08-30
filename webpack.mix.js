@@ -12,6 +12,9 @@ const path = require('path');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.autoload({
+    jquery: ['$', 'window.jQuery']
+});
 
 mix.options({
     terser: {
